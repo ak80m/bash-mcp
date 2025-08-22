@@ -100,8 +100,8 @@ impl Counter {
         const SECRET_NUMBER: i32 = 14;
         
         let response = match guess.cmp(&SECRET_NUMBER) {
-            std::cmp::Ordering::Greater => format!("Your guess {} is too small! Try a bigger number.", guess),
-            std::cmp::Ordering::Less => format!("Your guess {} is too big! Try a smaller number.", guess),
+            std::cmp::Ordering::Greater => format!("Your guess {} is too big! Try a smaller number.", guess),
+            std::cmp::Ordering::Less => format!("Your guess {} is too small! Try a bigger number.", guess),
             std::cmp::Ordering::Equal => format!("Congratulations! You guessed the secret number {}!", guess),
         };
         
